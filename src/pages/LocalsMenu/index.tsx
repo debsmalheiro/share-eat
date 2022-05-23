@@ -10,7 +10,7 @@ import { Header } from "../../components/Header";
 import { Titles } from "../../components/Titles";
 import { Meal } from "../../components/Meal";
 
-export function RestaurantMenu() {
+export function LocalsMenu() {
   const { localSelected } = useContext(Context);
   const navigate = useNavigate();
 

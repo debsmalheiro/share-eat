@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Container, CardRestaurant, CardNewPlate } from "./styles";
 
@@ -12,16 +12,16 @@ interface MenuProps {
   price: number;
 }
 
-interface RestaurantProps {
+interface LocalsProps {
   name: string;
   menuItems: MenuProps[];
 }
 
-export function Restaurant({ name, menuItems }: RestaurantProps) {
+export function Locals({ name, menuItems }: LocalsProps) {
   const { setLocalSelected } = useContext(Context);
 
   function changeRestaurant() {
-    setLocalSelected({name, menuItems});
+    setLocalSelected({ name, menuItems });
   }
 
   return (

@@ -5,7 +5,7 @@ import { Context } from "../../contexts";
 
 import { Header } from "../../components/Header";
 import { Titles } from "../../components/Titles";
-import { Restaurant } from "../../components/Restaurant";
+import { Locals } from "../../components/Locals";
 
 const Container = styled.div`
   padding: 1rem 2rem;
@@ -21,7 +21,7 @@ export function Dashboard() {
         description={`${locals.length} lugares encontrados`}
       />
       {locals.map(({ name, menuItems }) => (
-        <Restaurant key={name} name={name} menuItems={menuItems} />
+        <Locals key={name} name={name} menuItems={menuItems} />
       ))}
     </Container>
   );
