@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Container, Button } from "./styles";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { Icon } from "@iconify/react";
 
@@ -31,18 +31,12 @@ export function LocalsMenu() {
       />
 
       {menuItems.map(({ name, price, description }) => (
-        <Meal
-          key={name}
-          mealName={name}
-          mealPrice={price}
-          mealDescription={description}
-        />
+        <Meal key={name} name={name} price={price} description={description} />
       ))}
-      <Link to={`/new/${name}`}>
-        <Button>
-          <Icon icon="bi:plus" />
-        </Button>
-      </Link>
+
+      <Button onClick={() => navigate(`/new/${name}`)}>
+        <Icon icon="bi:plus" />
+      </Button>
     </Container>
   );
 }

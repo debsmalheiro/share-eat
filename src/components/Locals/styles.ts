@@ -15,6 +15,7 @@ export const CardRestaurant = styled.div`
   border-radius: 0.55rem;
   padding: 1.4rem;
   width: 100%;
+  cursor: pointer;
 
   color: var(--text-white);
 
