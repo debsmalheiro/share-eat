@@ -7,7 +7,7 @@ import { Icon } from "@iconify/react";
 import { Context } from "../../contexts";
 
 import { Header } from "../../components/Header";
-import { InitialTitle } from "../../components/InitialTitle";
+import { Titles } from "../../components/Titles";
 import { Meal } from "../../components/Meal";
 
 export function RestaurantMenu() {
@@ -24,7 +24,7 @@ export function RestaurantMenu() {
     <Container>
       <Header route={handleBackButton} />
 
-      <InitialTitle
+      <Titles
         key={name}
         title={name}
         description={`${menuItems.length} pratos`}

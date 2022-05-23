@@ -5,7 +5,7 @@ import { Container } from "./styles";
 import { Context } from "../../contexts";
 
 import { Header } from "../../components/Header";
-import { InitialTitle } from "../../components/InitialTitle";
+import { Titles } from "../../components/Titles";
 
 export function AddMeal() {
   const { localSelected } = useContext(Context);
@@ -26,8 +26,8 @@ export function AddMeal() {
   return (
     <Container>
       <Header route={handleBackButton} />
-      <InitialTitle title={localSelected.name} />
-      <form onSubmit={handleSubmit} >
+      <Titles title={localSelected.name} />
+      <form onSubmit={handleSubmit}>
         <label>
           Nome do prato
           <input

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Context } from "../../contexts";
 
 import { Header } from "../../components/Header";
-import { InitialTitle } from "../../components/InitialTitle";
+import { Titles } from "../../components/Titles";
 import { Restaurant } from "../../components/Restaurant";
 
 const Container = styled.div`
@@ -16,7 +16,7 @@ export function Dashboard() {
   return (
     <Container>
       <Header isHome={true} />
-      <InitialTitle
+      <Titles
         title="Lugares"
         description={`${locals.length} lugares encontrados`}
       />
